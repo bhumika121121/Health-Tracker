@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALTH Tracker – Your Daily Path to Wellness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar premium-nav">
+        <div class="container">
+            <div class="nav-brand">HEALTH Tracker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="diet-plans.html">Diet Plans</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="wellness-tips.html">Wellness Tips</a></li>
+                <li><a href="leftover-recipes.html">Leftover Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="btn btn-appointment" id="bookAppointmentBtn">Book Appointment</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero premium-hero">
+        <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&auto=format&fit=crop');"></div>
+        <div class="hero-overlay-gradient"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">Eat Well. Live Well. Feel Well.</h1>
+                <p class="hero-subtitle">Your daily path to better wellness and nutrition.</p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary btn-large">Start Your Wellness Journey</a>
+                    <button class="btn btn-secondary btn-large" id="heroBookBtn">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Book Appointment Ribbon -->
+        <div class="floating-ribbon" id="floatingRibbon">
+            <span>📅 Book Your Free Consultation</span>
+            <button class="ribbon-btn" onclick="openAppointmentModal()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100" onclick="window.location.href='diet-plans.html'">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&auto=format&fit=crop" alt="Personalized Diets">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-icon">🥗</div>
+                    <h3>Personalized Diets</h3>
+                    <p>Custom meal plans tailored to your goals, lifestyle, and dietary preferences.</p>
+                    <span class="feature-link">Learn More →</span>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200" onclick="window.location.href='calculator.html'">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop" alt="Calorie Insights">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-icon">🔥</div>
+                    <h3>Calorie Insights</h3>
+                    <p>Calculate your daily calorie needs with our advanced Mifflin-St Jeor calculator.</p>
+                    <span class="feature-link">Calculate Now →</span>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300" onclick="window.location.href='wellness-tips.html'">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop" alt="Healthy Living Tips">
+                        <div class="feature-overlay"></div>
+                    </div>
+                    <div class="feature-icon">🌿</div>
+                    <h3>Healthy Living Tips</h3>
+                    <p>Daily wellness advice to help you make sustainable lifestyle changes.</p>
+                    <span class="feature-link">Explore Tips →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">What Our Members Say</h2>
+            <div class="testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" alt="Sarah Johnson">
+                        </div>
+                        <p class="testimonial-text">"HEALTH Tracker transformed my relationship with food. The personalized diet plan helped me lose 15kg in 3 months while feeling energized!"</p>
+                        <h4 class="testimonial-name">Sarah Johnson</h4>
+                        <p class="testimonial-role">Weight Loss Success</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop" alt="Michael Chen">
+                        </div>
+                        <p class="testimonial-text">"The calorie calculator is incredibly accurate. Combined with the meal plans, I've gained 8kg of muscle in 6 months!"</p>
+                        <h4 class="testimonial-name">Michael Chen</h4>
+                        <p class="testimonial-role">Fitness Enthusiast</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" alt="Emma Rodriguez">
+                        </div>
+                        <p class="testimonial-text">"The wellness tips are practical and easy to follow. I've never felt better, and my energy levels have improved dramatically!"</p>
+                        <h4 class="testimonial-name">Emma Rodriguez</h4>
+                        <p class="testimonial-role">Wellness Advocate</p>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" onclick="changeTestimonial(-1)">‹</button>
+                    <button class="carousel-btn next" onclick="changeTestimonial(1)">›</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                    <span class="dot" onclick="currentTestimonial(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section with Image -->
+    <section class="intro-image-section">
+        <div class="container">
+            <div class="intro-image-wrapper">
+                <div class="intro-image-content" data-aos="fade-right">
+                    <h2>At HEALTH Tracker, we help you make small, sustainable changes for lifelong wellness.</h2>
+                    <p>Our team of nutritionists, chefs, and wellness coaches work together to create personalized plans that fit your lifestyle. No extreme diets, no guilt—just science-backed nutrition and sustainable habits.</p>
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="intro-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?w=800&auto=format&fit=crop" alt="Healthy Cooking">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HEALTH Tracker</h3>
+                    <p>Eat well. Live well. Feel well.</p>
+                    <p class="footer-email">📧 Bhumikatyagi@gmail.com</p>
+                    <p> For Inquiry Contact </p> 
+                               </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="diet-plans.html">Diet Plans</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="wellness-tips.html">Wellness Tips</a></li>
+                        <li><a href="leftover-recipes.html">Leftover Recipes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="YouTube">▶️ YouTube</a>
+                        <a href="#" aria-label="LinkedIn">💼 LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HEALTH Tracker. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeAppointmentModal()">&times;</span>
+            <h2>Book Your Appointment</h2>
+            <form id="appointmentForm" class="appointment-form">
+                <div class="form-group">
+                    <label for="apptName">Full Name</label>
+                    <input type="text" id="apptName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptEmail">Email</label>
+                    <input type="email" id="apptEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptPhone">Phone</label>
+                    <input type="tel" id="apptPhone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptDate">Preferred Date</label>
+                    <input type="date" id="apptDate" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="apptTime">Preferred Time</label>
+                    <select id="apptTime" name="time" required>
+                        <option value="">Select time</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="apptMessage">Message (Optional)</label>
+                    <textarea id="apptMessage" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-button" id="chatbotButton">
+            <span>💬</span>
+        </div>
+        <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-header">
+                <h3>Ask HEALTH Tracker Bot 🤖</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <p>Hello! I'm here to help with wellness and diet questions. Ask me anything! 😊</p>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" placeholder="Type your question...">
+                <button id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Testimonials Carousel
+        let currentTestimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showTestimonial(index) {
+            testimonials.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function changeTestimonial(direction) {
+            currentTestimonialIndex += direction;
+            if (currentTestimonialIndex < 0) currentTestimonialIndex = testimonials.length - 1;
+            if (currentTestimonialIndex >= testimonials.length) currentTestimonialIndex = 0;
+            showTestimonial(currentTestimonialIndex);
+        }
+
+        function currentTestimonial(index) {
+            currentTestimonialIndex = index - 1;
+            showTestimonial(currentTestimonialIndex);
+        }
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            changeTestimonial(1);
+        }, 5000);
+
+        // Appointment Modal Functions
+        function openAppointmentModal() {
+            document.getElementById('appointmentModal').style.display = 'flex';
+        }
+
+        function closeAppointmentModal() {
+            document.getElementById('appointmentModal').style.display = 'none';
+        }
+
+        // Open modal from buttons
+        document.getElementById('bookAppointmentBtn')?.addEventListener('click', openAppointmentModal);
+        document.getElementById('heroBookBtn')?.addEventListener('click', openAppointmentModal);
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('appointmentModal');
+            if (event.target === modal) {
+                closeAppointmentModal();
+            }
+        }
+
+        // Appointment Form Handler
+        document.getElementById('appointmentForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We\'ll contact you soon to confirm your appointment.');
+            closeAppointmentModal();
+            this.reset();
+        });
+
+        // Back to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+    </script>
+</body>
+</html>

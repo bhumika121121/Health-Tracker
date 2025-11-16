@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leftover Recipe Maker – HEALTH Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar premium-nav">
+        <div class="container">
+            <div class="nav-brand">HEALTH Tracker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="diet-plans.html">Diet Plans</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="wellness-tips.html">Wellness Tips</a></li>
+                <li><a href="leftover-recipes.html" class="active">Leftover Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="btn btn-appointment" id="bookAppointmentBtn">Book Appointment</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header leftover-header">
+        <div class="header-background" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1920&auto=format&fit=crop');"></div>
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <h1>Leftover Recipe Maker</h1>
+                <p class="header-subtitle">Turn yesterday's food into today's delicious meal.</p>
+                <p class="header-description">Don't waste your leftovers — reinvent them with healthy, flavorful recipes inspired by Indian kitchens.</p>
+                <a href="#recipes" class="btn btn-primary btn-large" style="margin-top: 2rem;">Explore Recipes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Cards Section -->
+    <section id="recipes" class="recipes-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Creative Leftover Recipes</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Transform your leftovers into delicious, nutritious meals</p>
+            <div class="recipe-cards-grid">
+                <div class="recipe-card-large" data-aos="fade-up" data-aos-delay="100">
+                    <div class="recipe-card-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&auto=format&fit=crop" alt="Leftover Roti Pizza">
+                        <div class="recipe-icon">🍕</div>
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3>Roti Pizza 🍕</h3>
+                        <p>Turn last night's chapatis into a quick homemade pizza with cheese and veggies.</p>
+                        <button class="btn btn-primary" onclick="openVideoModal('qb6PbpgwAsQ', 'Roti Pizza')">Watch Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card-large" data-aos="fade-up" data-aos-delay="200">
+                    <div class="recipe-card-image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&auto=format&fit=crop" alt="Rice Cutlets">
+                        <div class="recipe-icon">🍚</div>
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3>Leftover Rice Cutlets 🍚</h3>
+                        <p>Transform leftover rice into crispy golden cutlets with Indian spices.</p>
+                        <button class="btn btn-primary" onclick="openVideoModal('LHBgM-Zu4uo', 'Leftover Rice Cutlets')">Watch Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card-large" data-aos="fade-up" data-aos-delay="300">
+                    <div class="recipe-card-image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&auto=format&fit=crop" alt="Dal Paratha">
+                        <div class="recipe-icon">🌾</div>
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3>Leftover Dal Paratha 🌾</h3>
+                        <p>Use leftover dal to make soft, flavorful parathas — perfect for breakfast.</p>
+                        <button class="btn btn-primary" onclick="openVideoModal('JTHxboQ2rLs-dal', 'Leftover Dal Paratha')">Watch Recipe</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card-large" data-aos="fade-up" data-aos-delay="400">
+                    <div class="recipe-card-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&auto=format&fit=crop" alt="Mixed Veggie Upma">
+                        <div class="recipe-icon">🥦</div>
+                    </div>
+                    <div class="recipe-card-content">
+                        <h3>Mixed Veggie Upma 🥦</h3>
+                        <p>Reinvent your leftover vegetables into a healthy South Indian upma.</p>
+                        <button class="btn btn-primary" onclick="openVideoModal('JTHxboQ2rLs-upma', 'Mixed Veggie Upma')">Watch Recipe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid Section -->
+    <section id="videoSection" class="video-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Watch How to Make Magic with Leftovers</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Step-by-step video guides for all our leftover recipes</p>
+            <div class="video-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-card-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/LHBgM-Zu4uo" 
+                            title="Leftover Rice Cutlets"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-info">
+                        <h4>Leftover Rice Cutlets 🍚</h4>
+                        <p>Transform leftover rice into crispy golden cutlets with Indian spices.</p>
+                    </div>
+                </div>
+                <div class="video-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="video-card-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/qb6PbpgwAsQ" 
+                            title="Roti Pizza"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-info">
+                        <h4>Roti Pizza 🍕</h4>
+                        <p>Turn last night's chapatis into a quick homemade pizza with cheese and veggies.</p>
+                    </div>
+                </div>
+                <div class="video-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="video-card-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/JTHxboQ2rLs" 
+                            title="Leftover Dal Paratha"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-info">
+                        <h4>Leftover Dal Paratha 🌾</h4>
+                        <p>Use leftover dal to make soft, flavorful parathas — perfect for breakfast.</p>
+                    </div>
+                </div>
+                <div class="video-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="video-card-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/JTHxboQ2rLs" 
+                            title="Mixed Veggie Upma"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-card-info">
+                        <h4>Mixed Veggie Upma 🥦</h4>
+                        <p>Reinvent your leftover vegetables into a healthy South Indian upma.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zero-Waste Tips Section -->
+    <section class="tips-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Zero-Waste Kitchen Tips</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Smart ways to reduce food waste and maximize nutrition</p>
+            <div class="tips-grid">
+                <div class="tip-card-small" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tip-icon-large">♻️</div>
+                    <h4>Freeze Leftover Dal</h4>
+                    <p>Freeze leftover dal for soups. It stays fresh for up to 3 months and makes a quick, protein-rich meal.</p>
+                </div>
+                <div class="tip-card-small" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tip-icon-large">🍛</div>
+                    <h4>Reuse Rice</h4>
+                    <p>Reuse rice for kheer or pulao. Day-old rice works perfectly for these traditional dishes.</p>
+                </div>
+                <div class="tip-card-small" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tip-icon-large">🥕</div>
+                    <h4>Save Veggie Scraps</h4>
+                    <p>Save veggie scraps for stock. Create flavorful vegetable broth while reducing waste.</p>
+                </div>
+                <div class="tip-card-small" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tip-icon-large">🌿</div>
+                    <h4>Compost Organic Waste</h4>
+                    <p>Compost organic waste for plants. Create nutrient-rich soil while reducing kitchen waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer premium-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HEALTH Tracker</h3>
+                    <p>Eat well. Live well. Feel well.</p>
+                    <p class="footer-email">📧 hello@healthtracker.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="diet-plans.html">Diet Plans</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="wellness-tips.html">Wellness Tips</a></li>
+                        <li><a href="leftover-recipes.html">Leftover Recipes</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" aria-label="YouTube">▶️ YouTube</a>
+                        <a href="#" aria-label="LinkedIn">💼 LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HEALTH Tracker. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content video-modal-content">
+            <span class="modal-close" onclick="closeVideoModal()">&times;</span>
+            <div id="videoModalContent"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-button" id="chatbotButton">
+            <span>💬</span>
+        </div>
+        <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-header">
+                <h3>Ask HEALTH Tracker Bot 🤖</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <p>Hello! I'm here to help with wellness and diet questions. Ask me anything! 😊</p>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" placeholder="Type your question...">
+                <button id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Video Data with correct embed URLs
+        const videoData = {
+            'LHBgM-Zu4uo': {
+                title: 'Leftover Rice Cutlets 🍚',
+                embedUrl: 'https://www.youtube.com/embed/LHBgM-Zu4uo'
+            },
+            'qb6PbpgwAsQ': {
+                title: 'Roti Pizza 🍕',
+                embedUrl: 'https://www.youtube.com/embed/qb6PbpgwAsQ'
+            },
+            'JTHxboQ2rLs-dal': {
+                title: 'Leftover Dal Paratha 🌾',
+                embedUrl: 'https://www.youtube.com/embed/JTHxboQ2rLs'
+            },
+            'JTHxboQ2rLs-upma': {
+                title: 'Mixed Veggie Upma 🥦',
+                embedUrl: 'https://www.youtube.com/embed/JTHxboQ2rLs'
+            }
+        };
+
+        // Video Modal Functions
+        function openVideoModal(videoId, title) {
+            const video = videoData[videoId] || { embedUrl: `https://www.youtube.com/embed/${videoId}`, title: title };
+            const modalContent = document.getElementById('videoModalContent');
+            modalContent.innerHTML = `
+                <h2 style="margin-bottom: 1.5rem; color: var(--primary-color);">${video.title || title}</h2>
+                <div class="video-modal-container">
+                    <iframe 
+                        src="${video.embedUrl}?autoplay=1" 
+                        title="${video.title || title}"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            `;
+            document.getElementById('videoModal').style.display = 'flex';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoModal').style.display = 'none';
+            // Clear iframe to stop video playback
+            document.getElementById('videoModalContent').innerHTML = '';
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const videoModal = document.getElementById('videoModal');
+            if (event.target === videoModal) {
+                closeVideoModal();
+            }
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.style.opacity = '1';
+                backToTop.style.visibility = 'visible';
+            } else {
+                backToTop.style.opacity = '0';
+                backToTop.style.visibility = 'hidden';
+            }
+        });
+
+        // Book Appointment Modal
+        function openAppointmentModal() {
+            if (window.openAppointmentModal) {
+                window.openAppointmentModal();
+            } else {
+                window.location.href = 'contact.html';
+            }
+        }
+
+        document.getElementById('bookAppointmentBtn')?.addEventListener('click', openAppointmentModal);
+    </script>
+</body>
+</html>
+

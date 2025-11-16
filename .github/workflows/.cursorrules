@@ -1,0 +1,83 @@
+# Cursor Rules for Health Tracker Project
+
+## Project Information
+- **Repository**: https://github.com/bhumika121121/Health-Tracker.git
+- **Main Branch**: main
+- **Project Type**: Static HTML/CSS/JavaScript website
+
+## Deployment Rules
+
+### GitHub Actions Workflow
+- **Workflow File**: `.github/workflows/deploy.yml`
+- **Auto-deployment**: Automatically deploys to GitHub Pages when code is pushed to `main` branch
+- **Deployment Path**: The `wellness/` directory is deployed as the static site
+- **Workflow Triggers**: 
+  - Automatic on push to `main` branch
+  - Manual via workflow_dispatch
+- **After pushing to GitHub**: The workflow will automatically run and deploy to GitHub Pages
+
+### When deploying to GitHub:
+1. **Always check Git status first** before making changes
+2. **Commit messages should be descriptive** and follow this format:
+   - `feat: [description]` for new features
+   - `fix: [description]` for bug fixes
+   - `update: [description]` for updates
+   - `style: [description]` for styling changes
+   - `docs: [description]` for documentation
+
+3. **Before pushing to GitHub**:
+   - Ensure all files are saved
+   - Run `git status` to see what changed
+   - Add files with `git add .` or specific files
+   - Commit with a meaningful message
+   - Push to main branch: `git push origin main`
+   - The GitHub Actions workflow (deploy.yml) will automatically trigger and deploy
+
+4. **GitHub Repository Details**:
+   - Remote URL: https://github.com/bhumika121121/Health-Tracker.git
+   - Default branch: main
+   - Always push to main branch unless creating a feature branch
+   - GitHub Pages will be automatically updated via the workflow
+
+5. **File Structure**:
+   - Main project files are in the `wellness/` directory
+   - Root level contains configuration files (.gitignore, scripts, .github/workflows, etc.)
+   - The `deploy.yml` workflow deploys the `wellness/` folder to GitHub Pages
+
+6. **When user asks to deploy or push**:
+   - Check if git is initialized
+   - Verify remote is set correctly
+   - Stage all changes
+   - Create commit with descriptive message
+   - Push to GitHub repository
+   - Confirm successful push
+   - Inform user that GitHub Actions will automatically deploy to GitHub Pages
+
+7. **Never commit**:
+   - Sensitive information (API keys, passwords)
+   - Large binary files
+   - Node modules (if added later)
+   - Build artifacts unless necessary
+
+## Code Style
+- Use consistent indentation (spaces, not tabs)
+- Comment complex logic
+- Keep HTML semantic and accessible
+- Use modern CSS (flexbox, grid)
+- Follow JavaScript best practices
+
+## Project Structure
+```
+wellness/
+├── index.html          # Main homepage
+├── about.html          # About page
+├── calculator.html     # Health calculator
+├── contact.html        # Contact page
+├── diet-plans.html     # Diet plans page
+├── leftover-recipes.html # Recipes page
+├── wellness-tips.html  # Wellness tips page
+├── styles.css          # Main stylesheet
+├── script.js           # Main JavaScript
+└── chatbot.js          # Chatbot functionality
+```
+

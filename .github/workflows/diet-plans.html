@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plans – HEALTH Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">HEALTH Tracker</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="diet-plans.html" class="active">Diet Plans</a></li>
+                <li><a href="calculator.html">Calorie Calculator</a></li>
+                <li><a href="wellness-tips.html">Wellness Tips</a></li>
+                <li><a href="leftover-recipes.html">Leftover Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header diet-plans-header">
+        <div class="header-background" style="background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&auto=format&fit=crop');"></div>
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1>Personalized Diet Plans</h1>
+                <p>Choose a plan that fits your lifestyle and goals</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diet Plans Section -->
+    <section class="diet-plans-section section-with-bg">
+        <div class="section-background" style="background-image: url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1920&auto=format&fit=crop');"></div>
+        <div class="section-overlay-light"></div>
+        <div class="container">
+            <div class="plans-overview">
+                <p class="plans-intro">Get custom plans based on your lifestyle and goals. Each plan is designed by our nutrition experts to help you achieve sustainable results.</p>
+            </div>
+            <div class="diet-plans-grid">
+                <div class="diet-plan-card" data-aos="fade-up">
+                    <div class="plan-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&auto=format&fit=crop" alt="Weight Loss">
+                    </div>
+                    <div class="plan-content">
+                        <span class="plan-badge">Weight Loss</span>
+                        <h3>Weight Loss Plan</h3>
+                        <p>Structured meal plans designed to help you achieve your weight goals safely and sustainably. Includes calorie-controlled meals, portion guidance, and weekly meal plans.</p>
+                        <ul class="plan-features">
+                            <li>✓ Calorie-controlled meals</li>
+                            <li>✓ Weekly meal plans</li>
+                            <li>✓ Portion guidance</li>
+                            <li>✓ Progress tracking</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openPlanModal('weight-loss')">View Plan</button>
+                    </div>
+                </div>
+                <div class="diet-plan-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="plan-image">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&auto=format&fit=crop" alt="Balanced Diet">
+                    </div>
+                    <div class="plan-content">
+                        <span class="plan-badge">Balanced</span>
+                        <h3>Balanced Diet Plan</h3>
+                        <p>Well-rounded meal plans for overall health and wellness. Perfect for maintaining a healthy lifestyle with balanced nutrition from all food groups.</p>
+                        <ul class="plan-features">
+                            <li>✓ All food groups included</li>
+                            <li>✓ Nutrient-dense meals</li>
+                            <li>✓ Flexible options</li>
+                            <li>✓ Long-term sustainability</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openPlanModal('balanced')">View Plan</button>
+                    </div>
+                </div>
+                <div class="diet-plan-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plan-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop" alt="Muscle Gain">
+                    </div>
+                    <div class="plan-content">
+                        <span class="plan-badge">Muscle Gain</span>
+                        <h3>Muscle Gain Plan</h3>
+                        <p>High-protein nutrition plans to support muscle growth and recovery. Designed for those looking to build lean muscle mass through proper nutrition.</p>
+                        <ul class="plan-features">
+                            <li>✓ High-protein meals</li>
+                            <li>✓ Post-workout nutrition</li>
+                            <li>✓ Muscle recovery focus</li>
+                            <li>✓ Strength-building foods</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openPlanModal('muscle-gain')">View Plan</button>
+                    </div>
+                </div>
+                <div class="diet-plan-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&auto=format&fit=crop" alt="Detox Plan">
+                    </div>
+                    <div class="plan-content">
+                        <span class="plan-badge">Detox</span>
+                        <h3>Detox Plan</h3>
+                        <p>Gentle cleansing meal plans to reset your body and boost energy. Focuses on whole foods, hydration, and eliminating processed items.</p>
+                        <ul class="plan-features">
+                            <li>✓ Whole foods focus</li>
+                            <li>✓ Hydration emphasis</li>
+                            <li>✓ Natural cleansing</li>
+                            <li>✓ Energy boost</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="openPlanModal('detox')">View Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HEALTH Tracker</h3>
+                    <p>Eat well. Live well. Feel well.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="diet-plans.html">Diet Plans</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <li><a href="leftover-recipes.html">Leftover Recipes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HEALTH Tracker. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget" id="chatbotWidget">
+        <div class="chatbot-button" id="chatbotButton">
+            <span>💬</span>
+        </div>
+        <div class="chatbot-container" id="chatbotContainer">
+            <div class="chatbot-header">
+                <h3>Ask HEALTH Tracker Bot 🤖</h3>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <p>Hello! I'm here to help with wellness and diet questions. Ask me anything! 😊</p>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" placeholder="Type your question...">
+                <button id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diet Plan Modal -->
+    <div id="planModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closePlanModal()">&times;</span>
+            <div id="planModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+    <script>
+        AOS.init();
+        
+        const planData = {
+            'weight-loss': {
+                title: 'Weight Loss Plan',
+                calories: '1,500-1,800 kcal/day',
+                description: 'A structured meal plan designed to help you achieve your weight goals safely and sustainably.',
+                foods: ['Lean proteins (chicken, fish, tofu)', 'Leafy greens and vegetables', 'Whole grains (quinoa, brown rice)', 'Fresh fruits', 'Healthy fats (avocado, nuts)'],
+                tips: ['Eat 3 main meals + 2 snacks', 'Drink 8-10 glasses of water daily', 'Include 30 minutes of daily activity', 'Track your progress weekly']
+            },
+            'balanced': {
+                title: 'Balanced Diet Plan',
+                calories: '2,000-2,400 kcal/day',
+                description: 'Well-rounded meal plans for overall health and wellness with balanced nutrition from all food groups.',
+                foods: ['All food groups included', 'Colorful fruits and vegetables', 'Whole grains', 'Lean proteins', 'Dairy or alternatives'],
+                tips: ['Eat regular meals', 'Include variety in every meal', 'Stay hydrated', 'Enjoy treats in moderation']
+            },
+            'muscle-gain': {
+                title: 'Muscle Gain Plan',
+                calories: '2,500-3,000 kcal/day',
+                description: 'High-protein nutrition plans to support muscle growth and recovery.',
+                foods: ['High-protein meals', 'Complex carbohydrates', 'Post-workout nutrition', 'Protein-rich snacks'],
+                tips: ['Eat 5-6 meals per day', 'Consume protein within 30 min post-workout', 'Include strength training', 'Get adequate sleep']
+            },
+            'detox': {
+                title: 'Detox & Cleanse Plan',
+                calories: '1,200-1,500 kcal/day',
+                description: 'Gentle cleansing meal plans to reset your body and boost energy.',
+                foods: ['Whole foods only', 'Fresh vegetables and fruits', 'Herbal teas', 'Plenty of water'],
+                tips: ['Eliminate processed foods', 'Focus on hydration', 'Include light exercise', 'Get 7-9 hours of sleep']
+            }
+        };
+
+        function openPlanModal(planType) {
+            const plan = planData[planType];
+            const modalContent = document.getElementById('planModalContent');
+            modalContent.innerHTML = `
+                <h2>${plan.title}</h2>
+                <div class="plan-modal-info">
+                    <p><strong>Daily Calories:</strong> ${plan.calories}</p>
+                    <p class="plan-description">${plan.description}</p>
+                    <h3>Recommended Foods:</h3>
+                    <ul class="plan-foods">
+                        ${plan.foods.map(food => `<li>${food}</li>`).join('')}
+                    </ul>
+                    <h3>Tips for Success:</h3>
+                    <ul class="plan-tips">
+                        ${plan.tips.map(tip => `<li>${tip}</li>`).join('')}
+                    </ul>
+                    <button class="btn btn-primary btn-large" onclick="openAppointmentModal(); closePlanModal();" style="margin-top: 2rem; width: 100%;">Book Consultation</button>
+                </div>
+            `;
+            document.getElementById('planModal').style.display = 'flex';
+        }
+
+        function closePlanModal() {
+            document.getElementById('planModal').style.display = 'none';
+        }
+
+        function openAppointmentModal() {
+            if (window.openAppointmentModal) {
+                window.openAppointmentModal();
+            } else {
+                window.location.href = 'contact.html';
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('planModal');
+            if (event.target === modal) {
+                closePlanModal();
+            }
+        }
+    </script>
+</body>
+</html>
+
